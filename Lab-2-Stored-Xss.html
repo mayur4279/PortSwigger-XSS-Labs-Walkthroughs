@@ -1,0 +1,23 @@
+// Lab-2 Stored xss 
+
+
+<section class="comment">
+    <p>
+    <img src="/resources/images/avatarDefault.svg" class="avatar">                            <a id="author" href="https://fkjdghrenug.com">mayur2</a> | 10 November 2024
+    </p>
+    <p></p> Hiiiiiiiiiiiiiiiiiii <p>  </p>
+    <p></p>  
+
+
+// There are multiple classes for every comments so the text are saved in thw Html code,  
+// Hence Its is the stored XSS 
+
+
+<section class="comment">
+    <p>
+    <img src="/resources/images/avatarDefault.svg" class="avatar">                            <a id="author" href="https://fkjdghrenug.com">mayur2</a> | 10 November 2024
+    </p>
+    <p></p> Hi  <scirpt> alert(0) </scirpt> <p>  </p>
+    <p></p>  
+
+
